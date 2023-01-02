@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lesson 3</title>
+</head>
+<body>
+    <div class="header-section">
+        <h1 class="header"> Lesson 3 - Creating a meme generator</h1>
+    </div>
+    <main>
+        <section class="content">
+            <h2> Output </h2>
+            <h5> Programming Memes </h5>
+            <div class="meme-content">
+                <img src="" alt="meme" />
+            </div>
+            <h5> Tell Me Something Funny </h5>
+            <div class="joke-content">
+                <p class="joke-prompt"></p>
+                <p class="joke-reply1"></p>
+                <p class="joke-reply2"></p>
+            </div>
+            <h5> Give Me Some Wisdom ... </h5>
+            <div class="quote-content">
+                <p class="quote"></p>
+                <p class="author"></p>
+            </div>
+            <h5> I Want a Riddle ! </h5>
+            <div class="riddle-content">
+            
+            </div>
+        </section>
+
+        <section class="sidebar">
+            <h2> Actions </h2>
+            <button onclick="showMeme()" class="meme-btn"> Show a Meme </button>
+            <button onclick="showJoke()" class="joke-btn"> Tell Me a Joke </button>
+            <button onclick="showQuote()" class="quote-btn"> Random Quote </button>
+            <button onclick="showRiddle()"> Riddle Me </button>
+            <button onclick="revealAnswer()" class="reveal-btn"> Reveal Riddle Answer </button>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

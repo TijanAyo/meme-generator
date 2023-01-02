@@ -1,0 +1,81 @@
+body {
+    margin: 10px;
+    color:white;
+    background-color: darkolivegreen;
+    margin: 10px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    max-width: 350px;
+}
+
+a {
+    color: white
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.joke-content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.joke-prompt, .joke-reply1, .joke-reply2, .quote, .author, .tags{
+    color: #bfa38a;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content {
+    width: 65%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content p {
+    max-width: 80%;
+}
+
+.header {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-left: 3px solid #bfa38a;
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 200px;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 35px;
+    border: 1px solid #bfa38a;
+    background-color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
