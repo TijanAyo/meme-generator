@@ -1,36 +1,12 @@
 const showJokesBtn = document.querySelector('.joke-btn');
 const showQuoteBtn = document.querySelector('.quote-btn');
-/* function showMeme() {
-    showMemeBtn.addEventListener("click", async () => {
-        try {
-            const response = await fetch('https://ronreiter-meme-generator.p.rapidapi.com/meme?top=Top%20Text&bottom=Bottom%20Text&meme=Condescending-Wonka&font_size=50&font=Impact', options)
-            const data = await response.json();
-
-            const img = document.createElement('img');
-
-            img.src = data.imageUrl;
-            img.alt = data.name;
-
-            memeContent.appendChild(img);
-            /* const randomMeme = Math.floor(Math.random() * data.length);
-            console.log(randomMeme); */
-            // console.log(data[randomMeme]);
-            /* const randomMeme = Math.floor(Math.random() + data.length);
-            return data[randomMeme]; */
-        //} 
-        //catch(err) {
-        //    console.log(err);
-        //}
-    //});
-//} */
-
 
 function showMeme() {
     try {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
                 'X-RapidAPI-Host': 'programming-memes-images.p.rapidapi.com'
             }
         };
@@ -46,23 +22,9 @@ function showMeme() {
                 const index = Math.floor(Math.random() * memeImages.length);
                 
                 for(let i=0; i<memeImages.length; i++) {
-                    // console.log(memeImages[index]);
                     const memeSrc = document.querySelector("img");
                     memeSrc.src = memeImages[index]
                 }
-                // console.log(memeImages.length);
-
-                /* for(const meme of data) {
-                    const image = meme.image;
-
-                    console.log(image[index]);
-                } */
-                /* const meme = data[index];
-                
-                const id = meme.id;
-                const image = meme.image;
-
-                console.log(id, image); */
             });
 
     } catch(err) {
@@ -76,7 +38,7 @@ function showJoke() {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                    'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
                     'X-RapidAPI-Host': 'deez-nuts-jokes.p.rapidapi.com'
                 }
             };
@@ -107,7 +69,7 @@ function showQuote() {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                    'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
                     'X-RapidAPI-Host': 'random-quote-generator2.p.rapidapi.com'
                 }
             };
