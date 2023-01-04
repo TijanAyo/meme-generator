@@ -9,7 +9,7 @@ function showMeme() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Key': window.env.RapidAPIKey,
                 'X-RapidAPI-Host': 'programming-memes-images.p.rapidapi.com'
             }
         };
@@ -40,7 +40,7 @@ function showJoke() {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                    'X-RapidAPI-Key': window.env.RapidAPIKey,
                     'X-RapidAPI-Host': 'deez-nuts-jokes.p.rapidapi.com'
                 }
             };
@@ -70,7 +70,7 @@ function showQuote() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Key': window.env.RapidAPIKey,
                 'X-RapidAPI-Host': 'random-quote-generator2.p.rapidapi.com'
             }
         };
@@ -96,7 +96,7 @@ function showRiddle() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Key': window.env.RapidAPIKey,
                 'X-RapidAPI-Host': 'riddles-by-api-ninjas.p.rapidapi.com'
             }
         };
