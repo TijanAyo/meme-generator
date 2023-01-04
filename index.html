@@ -16,7 +16,9 @@
             <h2> Output </h2>
             <h5> Programming Memes </h5>
             <div class="meme-content">
-                <img src="" alt="meme" />
+                <div class="meme-img">
+                    <img src="" alt="" />
+                </div>
             </div>
             <h5> Tell Me Something Funny </h5>
             <div class="joke-content">
@@ -31,7 +33,8 @@
             </div>
             <h5> I Want a Riddle ! </h5>
             <div class="riddle-content">
-            
+                <p class="riddle_question"></p>
+                <p class="riddle_answer"></p>
             </div>
         </section>
 
@@ -40,7 +43,7 @@
             <button onclick="showMeme()" class="meme-btn"> Show a Meme </button>
             <button onclick="showJoke()" class="joke-btn"> Tell Me a Joke </button>
             <button onclick="showQuote()" class="quote-btn"> Random Quote </button>
-            <button onclick="showRiddle()"> Riddle Me </button>
+            <button onclick="showRiddle()" class="riddle-btn"> Riddle Me </button>
             <button onclick="revealAnswer()" class="reveal-btn"> Reveal Riddle Answer </button>
         </section>
     </main>

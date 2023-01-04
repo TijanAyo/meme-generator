@@ -5,6 +5,7 @@ body {
     margin: 10px;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
 }
 
 main {
@@ -12,11 +13,17 @@ main {
     flex-direction: row;
 }
 
+.meme-img {
+    margin: 0px;
+    margin-top: 0px;
+    padding:0px;
+}
+
 img {
     width: 100%;
     border: 1px solid white;
     border-radius: 5px;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 a {
@@ -32,7 +39,7 @@ a:hover {
     padding-right: 30px;
 }
 
-.joke-prompt, .joke-reply1, .joke-reply2, .quote, .author, .tags{
+.joke-prompt, .joke-reply1, .joke-reply2, .quote, .author, .tags, .riddle_question {
     color: #bfa38a;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

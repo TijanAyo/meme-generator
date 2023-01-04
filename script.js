@@ -1,12 +1,15 @@
 const showJokesBtn = document.querySelector('.joke-btn');
 const showQuoteBtn = document.querySelector('.quote-btn');
+const showRiddleBtn = document.querySelector('.riddle-btn');
+const revealAnswerBtn = document.querySelector('.reveal-btn');
+const riddleElem = document.querySelector('.riddle_answer');
 
 function showMeme() {
     try {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
+                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
                 'X-RapidAPI-Host': 'programming-memes-images.p.rapidapi.com'
             }
         };
@@ -16,7 +19,6 @@ function showMeme() {
             .then(data => {
                 const memeImages = [];
                 for (const img of data) {
-                    //const index = Math.floor(Math.random() + data.length);
                     memeImages.push(img.image);
                 }
                 const index = Math.floor(Math.random() * memeImages.length);
@@ -38,7 +40,7 @@ function showJoke() {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
+                    'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
                     'X-RapidAPI-Host': 'deez-nuts-jokes.p.rapidapi.com'
                 }
             };
@@ -65,36 +67,64 @@ function showJoke() {
 
 function showQuote() {
     showQuoteBtn.addEventListener("click", () => {
-        try {
-            const options = {
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': 'INPUT RAPID-API-KEY HERE',
-                    'X-RapidAPI-Host': 'random-quote-generator2.p.rapidapi.com'
-                }
-            };
-            
-            fetch('https://random-quote-generator2.p.rapidapi.com/randomQuote', options)
-                .then(response => response.json())
-                .then(data => {
-                    const quote = data[0];
-                    
-                    const Quote = document.querySelector(".quote");
-                    const Author = document.querySelector(".author");
-                    
-                    // Update the container element with the HTML
-                    Quote.innerHTML = `${quote.Quote}`;
-                    Author.innerHTML = `Author: ${quote.Author}`;
-                });
-        } catch(err) {
-            console.error(err);
-        }
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Host': 'random-quote-generator2.p.rapidapi.com'
+            }
+        };
+        
+        fetch('https://random-quote-generator2.p.rapidapi.com/randomQuote', options)
+            .then(response => response.json())
+            .then(data => {
+                const quote = data[0];
+                
+                const Quote = document.querySelector(".quote");
+                const Author = document.querySelector(".author");
+                
+                // Update the container element with the HTML
+                Quote.innerHTML = `${quote.Quote}`;
+                Author.innerHTML = `Author: ${quote.Author}`;
+            })
+            .catch(err => console.error(err));
     });
 }
 
 function showRiddle() {
-    const randomRiddle = getRandomData('riddles');
+    showRiddleBtn.addEventListener("click", () => {
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '2a32f0047cmsh79e887a04f89a9dp1581abjsn713fe14b14cf',
+                'X-RapidAPI-Host': 'riddles-by-api-ninjas.p.rapidapi.com'
+            }
+        };
+        
+        fetch('https://riddles-by-api-ninjas.p.rapidapi.com/v1/riddles', options)
+            .then(response => response.json())
+            .then(data => {
+                const riddle = data[0];
+    
+                const riddle_question = document.querySelector('.riddle_question');
+                const riddle_answer = document.querySelector('.riddle_answer');
+    
+                riddle_answer.style.display = 'none';
+    
+                // Update the container element with the HTML
+                riddle_question.innerHTML = `${riddle.question}`;
+                riddle_answer.innerHTML = `${riddle.answer}`;
+            })
+            .catch(err => console.error(err));
+    });
 }
 
-function revealAnswers() {
+function revealAnswer() {
+    revealAnswerBtn.addEventListener('click', () => {
+        if (riddleElem.style.display === 'none') {
+            riddleElem.style.display = 'block';
+        } else {
+            riddleElem.style.display = 'none';
+        }
+    });
 }
