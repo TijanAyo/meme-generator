@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="env.js"></script>
     <title>Lesson 3 - Meme Generator</title>
 </head>
 <body>
@@ -40,15 +42,12 @@
 
         <section class="sidebar">
             <h2> Actions </h2>
-            <button onclick="showMeme()" class="meme-btn"> Show a Meme </button>
-            <button onclick="showJoke()" class="joke-btn"> Tell Me a Joke </button>
-            <button onclick="showQuote()" class="quote-btn"> Random Quote </button>
-            <button onclick="showRiddle()" class="riddle-btn"> Riddle Me </button>
-            <button onclick="revealAnswer()" class="reveal-btn"> Reveal Riddle Answer </button>
+            <button class="meme-btn" onclick="showMeme()"> Show a Meme </button>
+            <button class="joke-btn" onclick="showJoke()"> Tell Me a Joke </button>
+            <button class="quote-btn" onclick="showQuote()"> Random Quote </button>
+            <button class="riddle-btn" onclick="showRiddle()"> Riddle Me </button>
+            <button class="reveal-btn" onclick="revealAnswer()"> Reveal Riddle Answer </button>
         </section>
     </main>
-    
-    <script src="script.js"></script>
-    <script src="env.js"></script>
 </body>
 </html>
